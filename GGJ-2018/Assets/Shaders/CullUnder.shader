@@ -1,7 +1,6 @@
 Shader "Custom/underY" {
      Properties {
          _MainTex ("Base (RGB)", 2D) = "white" {}
-         _objWorldPosition ("Object World Position (Set in Code)", Vector) = (0, 0, 0, 0)
          _objNormal ("Object Normal (Set in Code)", Vector) = (0, 0, 0, 0)
      }
      SubShader {
@@ -11,7 +10,6 @@ Shader "Custom/underY" {
          #pragma surface surf Lambert
  
          sampler2D _MainTex;
-         uniform float3 _objWorldPosition;
          uniform float3 _objNormal;
  
          struct Input {
@@ -20,7 +18,7 @@ Shader "Custom/underY" {
          };
  
          void surf (Input IN, inout SurfaceOutput o) {
-             clip (IN.worldPos.y - _objWorldPosition.y);
+             clip (IN.worldPos.y); //TODO: Dot Product
              half4 c = tex2D (_MainTex, IN.uv_MainTex);
              o.Albedo = c.rgb;
              o.Alpha = c.a;
