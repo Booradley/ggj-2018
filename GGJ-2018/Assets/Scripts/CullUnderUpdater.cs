@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class CullUnderUpdater : MonoBehaviour 
 {
 	[SerializeField]
@@ -136,14 +135,6 @@ public class CullUnderUpdater : MonoBehaviour
 
 	private void Update () 
 	{
-		if (!Application.isPlaying)
-		{
-			if (_renderers == null || _defaultRenderers.Length != _renderers.Count)
-			{
-				Setup();
-			}
-		}
-
 		foreach (Renderer renderer in _renderers)
 		{
 			if (renderer != null)
