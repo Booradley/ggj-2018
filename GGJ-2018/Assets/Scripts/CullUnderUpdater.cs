@@ -101,7 +101,7 @@ public class CullUnderUpdater : MonoBehaviour
 			if (renderer != null)
 			{ 
 				Material[] materials = renderer.materials;
-				Vector4 objectPosition = new Vector4(transform.position.x, transform.position.x, transform.position.x, 0);
+				Vector4 objectPosition = new Vector4(transform.position.x, transform.position.y, transform.position.z, 0);
 				Vector4 objectNormal = new Vector4(transform.up.x, transform.up.y, transform.up.z, 0);
 				for (int i = 0; i < materials.Length; ++i) 
 				{

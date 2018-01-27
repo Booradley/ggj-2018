@@ -20,7 +20,7 @@ Shader "Custom/underY" {
          };
  
          void surf (Input IN, inout SurfaceOutput o) {
-             clip (IN.worldPos.y);
+             clip (IN.worldPos.y - _objWorldPosition.y);
              half4 c = tex2D (_MainTex, IN.uv_MainTex);
              o.Albedo = c.rgb;
              o.Alpha = c.a;
