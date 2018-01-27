@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class CullUnderUpdater : MonoBehaviour 
 {
+	[SerializeField]
+	private Mesh _gizmoMesh;
+
 	[SerializeField]
 	private Material _sharedCullUnderMaterial;
 
@@ -18,14 +22,31 @@ public class CullUnderUpdater : MonoBehaviour
 
 	private void Awake()
 	{
+		Setup();
+	}
+
+	private void Setup()
+	{
+		if (_instanceCullUnderMaterial == null)
+		{
+			_instanceCullUnderMaterial = new Material(_sharedCullUnderMaterial);
+		}
 		_renderers = new List<Renderer>();
-		_instanceCullUnderMaterial = new Material(_sharedCullUnderMaterial);
 		foreach (Renderer renderer in _defaultRenderers)
 		{
 			if (renderer != null)
 			{
 				AddRenderer(renderer);
 			}
+		}
+	}
+
+	public void OnDrawGizmosSelected()
+	{
+		Gizmos.color = Color.red;
+		if (_gizmoMesh != null)
+		{
+			Gizmos.DrawWireMesh(_gizmoMesh, transform.position, transform.rotation, transform.localScale);
 		}
 	}
 
@@ -42,7 +63,8 @@ public class CullUnderUpdater : MonoBehaviour
 	{
 		foreach (Material material in renderer.materials)
 		{
-			if (material.name == _instanceCullUnderMaterial.name)
+			CleanCullUnderMaterialNames(material);
+			if (IsCullUnderMaterial(material))
 			{
 				return;
 			}
@@ -55,6 +77,14 @@ public class CullUnderUpdater : MonoBehaviour
 		}
 		materials[renderer.materials.Length] = _instanceCullUnderMaterial;
 		renderer.materials = materials;
+	}
+
+	private void CleanCullUnderMaterialNames(Material material)
+	{
+		if (material.name == _sharedCullUnderMaterial.name + " (Instance)" || material.name == _sharedCullUnderMaterial.name + " (Instance) (Instance)")
+		{
+			material.name = _sharedCullUnderMaterial.name;
+		}
 	}
 
 	public void RemoveRenderer(Renderer renderer)
@@ -101,21 +131,31 @@ public class CullUnderUpdater : MonoBehaviour
 
 	private bool IsCullUnderMaterial(Material material)
 	{
-		return material.name == _instanceCullUnderMaterial.name || material.name == _sharedCullUnderMaterial.name;
+		return material.name == _instanceCullUnderMaterial.name || material.name == _sharedCullUnderMaterial.name || material.name == _sharedCullUnderMaterial.name + " (Instance)";
 	}
 
 	private void Update () 
 	{
+		if (!Application.isPlaying)
+		{
+			if (_renderers == null || _defaultRenderers.Length != _renderers.Count)
+			{
+				Setup();
+			}
+		}
+
 		foreach (Renderer renderer in _renderers)
 		{
 			if (renderer != null)
 			{ 
 				Material[] materials = renderer.materials;
+				Vector4 objectPosition = new Vector4(transform.position.x, transform.position.y, transform.position.z, 0);
 				Vector4 objectNormal = new Vector4(transform.up.x, transform.up.y, transform.up.z, 0);
 				for (int i = 0; i < materials.Length; ++i) 
 				{
 					if (IsCullUnderMaterial(materials[i]))
 					{
+						materials[i].SetVector("_objWorldPosition", objectPosition);
 						materials[i].SetVector("_objNormal", objectNormal);
 					}
 				}
