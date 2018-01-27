@@ -7,55 +7,37 @@ public class Book : VRTK_InteractableObject
     private BookCover _cover = null;
 
     [SerializeField]
+    private BookImage _image = null;
+
+    [SerializeField]
     private Rigidbody _coverRigidbody = null;
 
     [SerializeField]
     private Collider _coverCollider = null;
 
-    public override void Grabbed(VRTK_InteractGrab currentGrabbingObject)
+    [SerializeField]
+    private HingeJoint _joint;
+
+    protected override void Awake()
     {
-        base.Grabbed(currentGrabbingObject);
-        
-        ToggleCover(true);
-        
-        if (VRTK_DeviceFinder.GetControllerHand(currentGrabbingObject.controllerEvents.gameObject) == SDK_BaseController.ControllerHand.Left)
-        {
-            allowedTouchControllers = AllowedController.LeftOnly;
-            allowedUseControllers = AllowedController.LeftOnly;
+        base.Awake();
 
-            _cover.allowedGrabControllers = AllowedController.RightOnly;
-        }
-        else if (VRTK_DeviceFinder.GetControllerHand(currentGrabbingObject.controllerEvents.gameObject) == SDK_BaseController.ControllerHand.Right)
-        {
-            allowedTouchControllers = AllowedController.RightOnly;
-            allowedUseControllers = AllowedController.RightOnly;
-
-            _cover.allowedGrabControllers = AllowedController.LeftOnly;
-        }
+        _image.enabled = false;
     }
 
-    public override void Ungrabbed(VRTK_InteractGrab previousGrabbingObject)
+    protected override void Update()
     {
-        base.Ungrabbed(previousGrabbingObject);
+        base.Update();
 
-        ToggleCover(false);
-        
-        allowedTouchControllers = AllowedController.Both;
-        allowedUseControllers = AllowedController.Both;
-
-        _cover.allowedGrabControllers = AllowedController.Both;
-    }
-
-    private void ToggleCover(bool state)
-    {
-        if (!state)
+        bool canInteract = Mathf.Abs(_joint.angle) >= 90f;
+        if (!canInteract && _image.enabled)
         {
-            _cover.ForceStopInteracting();
+            if (_image.IsGrabbed())
+            {
+                _image.ForceStopInteracting();
+            }
         }
 
-        _cover.enabled = state;
-        _cover.isGrabbable = state;
-        //_coverRigidbody.isKinematic = state;
-        //_coverCollider.isTrigger = state;
+        _image.enabled = canInteract;
     }
 }
