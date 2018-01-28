@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4602043608515840}
   - component: {fileID: 54627491331370888}
-  - component: {fileID: 114872795089573782}
+  - component: {fileID: 114083089155809196}
   - component: {fileID: 114709785318532668}
   - component: {fileID: 114468148367303272}
   m_Layer: 0
@@ -707,6 +707,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.110501826, y: 0.03291297, z: 0.15921855}
   m_Center: {x: -0.00067899376, y: -0.00014150143, z: 0.0016924739}
+--- !u!114 &114083089155809196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1201717895953402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2283b752a0364e546bc919b3d4caaffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableWhenIdle: 1
+  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  allowedTouchControllers: 0
+  ignoredColliders: []
+  isGrabbable: 1
+  holdButtonToGrab: 1
+  stayGrabbedOnTeleport: 1
+  validDrop: 1
+  grabOverrideButton: 3
+  allowedGrabControllers: 0
+  grabAttachMechanicScript: {fileID: 114709785318532668}
+  secondaryGrabActionScript: {fileID: 114468148367303272}
+  isUsable: 0
+  holdButtonToUse: 0
+  useOnlyIfGrabbed: 0
+  pointerActivatesUseAction: 0
+  useOverrideButton: 0
+  allowedUseControllers: 0
+  usingState: 0
 --- !u!114 &114146231957816436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -852,36 +882,6 @@ MonoBehaviour:
   detachDistance: 1
   velocityLimit: Infinity
   angularVelocityLimit: Infinity
---- !u!114 &114872795089573782
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1201717895953402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disableWhenIdle: 0
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
-  allowedTouchControllers: 0
-  ignoredColliders: []
-  isGrabbable: 1
-  holdButtonToGrab: 1
-  stayGrabbedOnTeleport: 1
-  validDrop: 1
-  grabOverrideButton: 3
-  allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114709785318532668}
-  secondaryGrabActionScript: {fileID: 114468148367303272}
-  isUsable: 0
-  holdButtonToUse: 0
-  useOnlyIfGrabbed: 0
-  pointerActivatesUseAction: 0
-  useOverrideButton: 0
-  allowedUseControllers: 0
-  usingState: 0
 --- !u!114 &114887863262536974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -952,4 +952,4 @@ MonoBehaviour:
   _proxy: {fileID: 1987245290844566}
   _actualObject: {fileID: 1201717895953402}
   _actualObjectInteractables:
-  - {fileID: 114872795089573782}
+  - {fileID: 0}
