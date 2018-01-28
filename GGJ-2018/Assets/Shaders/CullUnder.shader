@@ -12,7 +12,7 @@ Shader "Custom/CullUnder" {
          _objNormal ("Object Normal (Set in Code)", Vector) = (0, 0, 0, 0)
      }
      SubShader {
-         Tags { "RenderType"="Opaque" }
+         Tags { "RenderType"="Opaque" "Queue" = "Transparent" }
          Cull Off
          CGPROGRAM
          #pragma surface surf Lambert
