@@ -7,9 +7,6 @@ public class SnakeRain : VRTK_InteractableObject
     [SerializeField]
     private GameObject[] _snakePrefabs;
 
-    [SerializeField]
-    private Transform _spawnTransform;
-
     private Coroutine _rainCoroutine;
 
     public override void Grabbed(VRTK_InteractGrab currentGrabbingObject = null)
@@ -32,12 +29,13 @@ public class SnakeRain : VRTK_InteractableObject
 
     private IEnumerator Spawn()
     {
+        Transform spawnTransform = GameObject.FindGameObjectWithTag("Snake Rain Spawner").transform;
         WaitForSeconds interval = new WaitForSeconds(.5f);
         while (true)
         {
             yield return interval;
 
-            GameObject go = Instantiate(_snakePrefabs[UnityEngine.Random.Range(0, _snakePrefabs.Length)], _spawnTransform.position, Random.rotation);
+            GameObject go = Instantiate(_snakePrefabs[UnityEngine.Random.Range(0, _snakePrefabs.Length)], spawnTransform.position, Random.rotation);
             Rigidbody[] rbs = go.GetComponentsInChildren<Rigidbody>();
             for (int i = 0; i < rbs.Length; i++)
             {
