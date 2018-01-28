@@ -378,7 +378,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: VRTK.VRTK_Control+ValueChangedEvent, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  interactWithoutGrab: 1
+  interactWithoutGrab: 0
   connectedTo: {fileID: 1898630838622412}
   grabType: 1
   detatchDistance: 0.1
@@ -417,7 +417,7 @@ MonoBehaviour:
   holdButtonToUse: 0
   useOnlyIfGrabbed: 0
   pointerActivatesUseAction: 0
-  useOverrideButton: 0
+  useOverrideButton: 3
   allowedUseControllers: 0
   usingState: 0
   _wheel: {fileID: 114246570496018044}
@@ -426,10 +426,10 @@ MonoBehaviour:
   _winderRotateAngleAmount: {x: 0, y: -10, z: 0}
   _bounceSource: {fileID: 4421732692480880}
   _bounceDelay: 0.4
-  _bounceDirectionMin: {x: 10, y: 100, z: -2}
-  _bounceDirectionMax: {x: 10, y: 100, z: 2}
+  _bounceDirectionMin: {x: 10, y: 100, z: -5}
+  _bounceDirectionMax: {x: 12, y: 125, z: 5}
   _windHapticStrength: 0.1
-  _bounceHapticStrength: 0.3
+  _bounceHapticStrength: 0.5
 --- !u!114 &114598362754531238
 MonoBehaviour:
   m_ObjectHideFlags: 1

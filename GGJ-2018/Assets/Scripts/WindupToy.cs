@@ -107,7 +107,7 @@ public class WindupToy : VRTK_InteractableObject
 				_timer = 0;
 				if (_controllerReference != null)
 				{
-					VRTK_ControllerHaptics.TriggerHapticPulse(_controllerReference, _bounceHapticStrength, 0.5f, 0.01f);
+					VRTK_ControllerHaptics.TriggerHapticPulse(_controllerReference, _bounceHapticStrength, 0.1f, 0.01f);
 				}
 			}
 			else
