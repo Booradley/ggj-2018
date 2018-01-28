@@ -8,16 +8,16 @@ public class CullUnderUpdater : MonoBehaviour
 	private Mesh _gizmoMesh;
 
 	[SerializeField]
-	private Material _sharedCullUnderMaterial;
+	private Renderer[] _defaultRenderers;
 
 	[SerializeField]
-	private Renderer[] _defaultRenderers;
+	private GameObject _getAllRenderersInChildren;
 
 	[System.NonSerialized]
 	private List<Renderer> _renderers;
 
 	[System.NonSerialized]
-	private Material _instanceCullUnderMaterial;
+	private Shader _sharedCullUnderShader;
 
 	private void Awake()
 	{
@@ -26,9 +26,9 @@ public class CullUnderUpdater : MonoBehaviour
 
 	private void Setup()
 	{
-		if (_instanceCullUnderMaterial == null)
+		if (_sharedCullUnderShader == null)
 		{
-			_instanceCullUnderMaterial = new Material(_sharedCullUnderMaterial);
+			_sharedCullUnderShader = Shader.Find("Custom/CullUnder");;
 		}
 		_renderers = new List<Renderer>();
 		foreach (Renderer renderer in _defaultRenderers)
@@ -36,6 +36,16 @@ public class CullUnderUpdater : MonoBehaviour
 			if (renderer != null)
 			{
 				AddRenderer(renderer);
+			}
+		}
+		if (_getAllRenderersInChildren != null)
+		{
+			foreach(Renderer renderer in _getAllRenderersInChildren.GetComponentsInChildren<Renderer>())
+			{
+				if (renderer != null)
+				{
+					AddRenderer(renderer);
+				}
 			}
 		}
 	}
@@ -53,37 +63,28 @@ public class CullUnderUpdater : MonoBehaviour
 	{
 		if (!_renderers.Contains(renderer))
 		{
-			_renderers.Add(renderer);
-			AddCullUnderMaterial(renderer);
+			if (HasCullUnderMaterial(renderer))
+			{
+				_renderers.Add(renderer);
+			}
+			else
+			{
+				Debug.LogWarningFormat("Renderer {0} does not contain a {1} shader!", renderer.gameObject.name, _sharedCullUnderShader.name); 
+			}			
 		}
 	}
 
-	private void AddCullUnderMaterial(Renderer renderer)
+	private bool HasCullUnderMaterial(Renderer renderer)
 	{
 		foreach (Material material in renderer.materials)
 		{
-			CleanCullUnderMaterialNames(material);
 			if (IsCullUnderMaterial(material))
 			{
-				return;
+				return true;
 			}
 		}
 
-		Material[] materials = new Material[renderer.materials.Length + 1];
-		for (int i = 0; i < renderer.materials.Length; ++i)
-		{
-			materials[i] = renderer.materials[i];
-		}
-		materials[renderer.materials.Length] = _instanceCullUnderMaterial;
-		renderer.materials = materials;
-	}
-
-	private void CleanCullUnderMaterialNames(Material material)
-	{
-		if (material.name == _sharedCullUnderMaterial.name + " (Instance)" || material.name == _sharedCullUnderMaterial.name + " (Instance) (Instance)")
-		{
-			material.name = _sharedCullUnderMaterial.name;
-		}
+		return false;
 	}
 
 	public void RemoveRenderer(Renderer renderer)
@@ -91,49 +92,15 @@ public class CullUnderUpdater : MonoBehaviour
 		if (_renderers.Contains(renderer))
 		{
 			_renderers.Remove(renderer);
-            RemoveCullUnderMaterial(renderer);	
-		}
-	}
-
-	private void RemoveCullUnderMaterial(Renderer renderer)
-	{
-		bool materialAlreadyExists = false;
-		bool materialRemoved = true;
-		foreach (Material material in renderer.materials)
-		{
-			if (material.name == _instanceCullUnderMaterial.name)
-			{
-				materialAlreadyExists = true;
-				materialRemoved = false;
-			}
-		}
-		if (materialAlreadyExists && renderer.materials.Length > 1)
-		{
-			Material[] materials = new Material[renderer.materials.Length - 1];
-			int i = 0;
-			int j = 0;
-			for (; i < renderer.materials.Length; ++i, ++j)
-			{
-				if (!materialRemoved && IsCullUnderMaterial(renderer.materials[i]))
-				{
-					--j;
-					materialRemoved = true;
-				}
-				else
-				{
-					materials[j] = renderer.materials[i];
-				}
-			}
-			renderer.materials = materials;
 		}
 	}
 
 	private bool IsCullUnderMaterial(Material material)
 	{
-		return material.name == _instanceCullUnderMaterial.name || material.name == _sharedCullUnderMaterial.name || material.name == _sharedCullUnderMaterial.name + " (Instance)";
+		return material.shader == _sharedCullUnderShader;
 	}
 
-	private void Update () 
+	private void Update() 
 	{
 		foreach (Renderer renderer in _renderers)
 		{
