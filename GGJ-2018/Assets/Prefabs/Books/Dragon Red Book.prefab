@@ -482,6 +482,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4739567214799160}
+  - component: {fileID: 65186766898136478}
   m_Layer: 0
   m_Name: DragonWindUpCollider
   m_TagString: Untagged
@@ -1572,6 +1573,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.110501826, y: 0.08, z: 0.15921855}
   m_Center: {x: -0.00067899376, y: -0.00014150143, z: 0.0016924739}
+--- !u!65 &65186766898136478
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1836977139935084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08748662, y: 0.025452495, z: 0.16961628}
+  m_Center: {x: 0.000027243048, y: -0.08303064, z: 0.02481085}
 --- !u!114 &114006160936969812
 MonoBehaviour:
   m_ObjectHideFlags: 1
