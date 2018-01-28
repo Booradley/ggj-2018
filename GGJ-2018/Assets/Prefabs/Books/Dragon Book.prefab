@@ -1854,5 +1854,6 @@ MonoBehaviour:
   _bounceDelay: 0.4
   _bounceDirectionMin: {x: 10, y: 100, z: -5}
   _bounceDirectionMax: {x: 12, y: 125, z: 5}
+  _checkForGroundDistance: 0.05
   _windHapticStrength: 0.1
   _bounceHapticStrength: 0.5
