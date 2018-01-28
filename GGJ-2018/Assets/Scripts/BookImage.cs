@@ -28,7 +28,10 @@ public class BookImage : VRTK_InteractableObject
     private GameObject _proxy;
 
     [SerializeField]
-    private VRTK_InteractableObject _actualObject;
+    private GameObject _actualObject;
+
+    [SerializeField]
+    private VRTK_InteractableObject[] _actualObjectInteractables;
 
     private Vector3 _initialLocalScale;
     private Vector3 _initialLocalPosition;
@@ -159,7 +162,11 @@ public class BookImage : VRTK_InteractableObject
 
         _proxy.SetActive(false);
         _actualObject.gameObject.SetActive(true);
-        _actualObject.InteractableObjectUngrabbed += HandleObjectDropped;
+
+        for (int i = 0; i < _actualObjectInteractables.Length; i++)
+        {
+            _actualObjectInteractables[i].InteractableObjectUngrabbed += HandleObjectDropped;
+        }
 
         _bookImageCollider.enabled = false;
 
@@ -170,7 +177,7 @@ public class BookImage : VRTK_InteractableObject
         VRTK_InteractTouch touch = _controllerReference.actual.GetComponentInChildren<VRTK_InteractTouch>();
         VRTK_InteractGrab grab = _controllerReference.actual.GetComponentInChildren<VRTK_InteractGrab>();
         
-        touch.ForceTouch(_actualObject.gameObject);
+        touch.ForceTouch(_actualObjectInteractables[0].gameObject);
         
         grab.ForceRelease();
 
@@ -184,7 +191,10 @@ public class BookImage : VRTK_InteractableObject
         float distance = Vector3.Distance(_bookImageTransform.position, _actualObject.transform.position);
         if (distance < _scaleDistance)
         {
-            _actualObject.InteractableObjectUngrabbed -= HandleObjectDropped;
+            for (int i = 0; i < _actualObjectInteractables.Length; i++)
+            {
+                _actualObjectInteractables[i].InteractableObjectUngrabbed -= HandleObjectDropped;
+            }
 
             _proxy.SetActive(true);
             _proxy.transform.localPosition = _initialLocalPosition;
