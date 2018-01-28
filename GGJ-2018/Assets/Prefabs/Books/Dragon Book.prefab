@@ -411,6 +411,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4572895113831500}
+  - component: {fileID: 65741169084634962}
   m_Layer: 0
   m_Name: DragonWindUpCollider
   m_TagString: Untagged
@@ -679,7 +680,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1207988498053994}
   m_LocalRotation: {x: 0.5000505, y: -0.499701, z: 0.49994928, w: 0.5002992}
-  m_LocalPosition: {x: -0.043, y: 1.629, z: -1.449}
+  m_LocalPosition: {x: -0.043, y: 1.629, z: -1.209}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4716491920789964}
@@ -1571,6 +1572,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65741169084634962
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724583348927782}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08748662, y: 0.025452495, z: 0.16961628}
+  m_Center: {x: 0.000027243048, y: -0.08303064, z: 0.02481085}
 --- !u!114 &114026363032022696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1852,8 +1865,8 @@ MonoBehaviour:
   _winderRotateAngleAmount: {x: 0, y: -10, z: 0}
   _bounceSource: {fileID: 4673662039396066}
   _bounceDelay: 0.4
-  _bounceDirectionMin: {x: 10, y: 100, z: -5}
-  _bounceDirectionMax: {x: 12, y: 125, z: 5}
+  _bounceDirectionMin: {x: 0, y: 100, z: -5}
+  _bounceDirectionMax: {x: 5, y: 125, z: 5}
   _checkForGroundDistance: 0.05
   _windHapticStrength: 0.1
   _bounceHapticStrength: 0.5

@@ -97,7 +97,6 @@ public class WindupToy : VRTK_InteractableObject
 			{
 				if (Physics.Raycast(_bounceSource.position, -_bounceSource.up, _checkForGroundDistance))
 				{
-					Debug.DrawRay(_bounceSource.position, (-_bounceSource.up) * _checkForGroundDistance, Color.yellow);
 					_currentCharge -= _wheel.stepSize;
 					Vector3 bounceForce = new Vector3(
 						UnityEngine.Random.Range(_bounceDirectionMin.x, _bounceDirectionMax.x),
@@ -126,5 +125,6 @@ public class WindupToy : VRTK_InteractableObject
 		{
 			_currentCharge = 0;
 		}
+		Debug.DrawRay(_bounceSource.position, (-_bounceSource.up) * _checkForGroundDistance, Color.yellow);
 	}
 }
