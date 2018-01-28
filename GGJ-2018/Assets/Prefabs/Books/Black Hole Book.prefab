@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 65003494716864490}
   - component: {fileID: 114178322952406886}
   - component: {fileID: 114921921796168356}
+  - component: {fileID: 114909379603995808}
   m_Layer: 8
   m_Name: BookImage
   m_TagString: Untagged
@@ -306,15 +307,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780584650900260}
-  m_LocalRotation: {x: 0.07698162, y: -0.7029038, z: 0.07698219, w: 0.7029039}
-  m_LocalPosition: {x: 0.21, y: 2.3535, z: -0.8948}
+  m_LocalRotation: {x: 0.49999973, y: -0.49999985, z: 0.5000001, w: 0.50000036}
+  m_LocalPosition: {x: 0.233, y: 2.39, z: -1.0040001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4831169322584010}
   - {fileID: 4997585785359654}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 12.500001, y: -90.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: 90.00001, y: -90.00001, z: 90.00001}
 --- !u!4 &4716048010333904
 Transform:
   m_ObjectHideFlags: 1
@@ -606,7 +607,7 @@ HingeJoint:
   m_Anchor: {x: 0.5, y: -0.5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.024845036, y: 0.03517503, z: -0.0004400015}
+  m_ConnectedAnchor: {x: 0.024845, y: 0.035175014, z: -0.00044008903}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -654,7 +655,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.12987879, y: 0.03291297, z: 0.13883865}
+  m_Size: {x: 0.12987879, y: 0.08, z: 0.13883865}
   m_Center: {x: -0.0047158636, y: -0.00014150143, z: -0.00339365}
 --- !u!65 &65091072264056616
 BoxCollider:
@@ -742,7 +743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableWhenIdle: 0
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.11724126, g: 1, b: 0, a: 0}
   allowedTouchControllers: 0
   ignoredColliders: []
   isGrabbable: 1
@@ -896,11 +897,26 @@ MonoBehaviour:
   allowedUseControllers: 0
   usingState: 0
   _pulseDelay: 2.5
-  _pullForce: 70
+  _pullForce: 450
   _minGravityPercent: 0.1
   _minTimeScalePercent: 0.5
   _disableGravityPercent: 0
-  _pulseHapticStrength: 0.6
+  _pulseHapticStrength: 1
+--- !u!114 &114909379603995808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1802109815551768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
 --- !u!114 &114921921796168356
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 65160228106028658}
   - component: {fileID: 114611010514049386}
   - component: {fileID: 114131026798446756}
+  - component: {fileID: 114544992091160702}
   m_Layer: 8
   m_Name: BookImage
   m_TagString: Untagged
@@ -558,7 +559,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1294955884519774}
   m_LocalRotation: {x: 0.5000505, y: -0.499701, z: 0.49994928, w: 0.5002992}
-  m_LocalPosition: {x: -0.043, y: 1.629, z: -1.449}
+  m_LocalPosition: {x: -0.1322, y: 2.0953, z: -1.0216}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4759106429101352}
@@ -1094,7 +1095,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6963e3f19c1f9cc4cbbf908b48bbc117, type: 2}
+  - {fileID: 2100000, guid: 30b6abca0e1cb6d47958a75bacedc399, type: 2}
   - {fileID: 2100000, guid: 3bfe0e3f53f81e641a4ba8cd820a9b20, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1197,7 +1198,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6963e3f19c1f9cc4cbbf908b48bbc117, type: 2}
+  - {fileID: 2100000, guid: 30b6abca0e1cb6d47958a75bacedc399, type: 2}
   - {fileID: 2100000, guid: 3bfe0e3f53f81e641a4ba8cd820a9b20, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1315,7 +1316,7 @@ HingeJoint:
   m_Anchor: {x: 0.5, y: -0.5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.024844956, y: 0.035175025, z: -0.00044003315}
+  m_ConnectedAnchor: {x: 0.024845015, y: 0.03517503, z: -0.00043991394}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1569,7 +1570,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.110501826, y: 0.04, z: 0.15921855}
+  m_Size: {x: 0.110501826, y: 0.08, z: 0.15921855}
   m_Center: {x: -0.00067899376, y: -0.00014150143, z: 0.0016924739}
 --- !u!114 &114006160936969812
 MonoBehaviour:
@@ -1686,6 +1687,21 @@ MonoBehaviour:
   _checkForGroundDistance: 0.05
   _windHapticStrength: 0.1
   _bounceHapticStrength: 0.5
+--- !u!114 &114544992091160702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1482073694028340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
 --- !u!114 &114575866876326450
 MonoBehaviour:
   m_ObjectHideFlags: 1
