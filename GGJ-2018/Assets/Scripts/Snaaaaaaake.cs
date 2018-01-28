@@ -14,11 +14,19 @@ public class Snaaaaaaake : MonoBehaviour
     private IEnumerator Spawn()
     {
         WaitForSeconds interval = new WaitForSeconds(.5f);
-        while (true)
+        int count = 50;
+        while (count > 0)
         {
             yield return interval;
 
-            Instantiate(_snake, transform.position, Random.rotation);
+            GameObject go = Instantiate(_snake, transform.position, Random.rotation);
+            Rigidbody[] rbs = go.GetComponentsInChildren<Rigidbody>();
+            for (int i = 0; i < rbs.Length; i++)
+            {
+                rbs[i].AddForce(Random.insideUnitSphere * 0.5f);
+            }
+
+            count--;
         }
     }
 }
