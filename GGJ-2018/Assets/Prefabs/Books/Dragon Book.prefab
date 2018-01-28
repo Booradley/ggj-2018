@@ -1650,7 +1650,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: VRTK.VRTK_Control+ValueChangedEvent, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  interactWithoutGrab: 1
+  interactWithoutGrab: 0
   connectedTo: {fileID: 1560898089289544}
   grabType: 1
   detatchDistance: 0.1
