@@ -14,7 +14,7 @@ public class Snaaaaaaake : MonoBehaviour
     private IEnumerator Spawn()
     {
         WaitForSeconds interval = new WaitForSeconds(.5f);
-        int count = 50;
+        int count = 200;
         while (count > 0)
         {
             yield return interval;
