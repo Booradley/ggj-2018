@@ -177,7 +177,10 @@ public class BookImage : VRTK_InteractableObject
         VRTK_InteractTouch touch = _controllerReference.actual.GetComponentInChildren<VRTK_InteractTouch>();
         VRTK_InteractGrab grab = _controllerReference.actual.GetComponentInChildren<VRTK_InteractGrab>();
         
-        touch.ForceTouch(_actualObjectInteractables[0].gameObject);
+        if (_actualObjectInteractables.Length > 0)
+        {
+            touch.ForceTouch(_actualObjectInteractables[0].gameObject);
+        }
         
         grab.ForceRelease();
 
