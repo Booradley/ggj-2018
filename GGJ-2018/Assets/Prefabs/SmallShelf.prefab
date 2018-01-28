@@ -675,6 +675,9 @@ MonoBehaviour:
   - bookPrefab: {fileID: 1430986300416302, guid: 6d4b0f6a4ad350b488d044b245d3350b,
       type: 2}
     weight: 33
+  - bookPrefab: {fileID: 1931466910367936, guid: 8fe24025e181fb948b28562de249c0ff,
+      type: 2}
+    weight: 33
   _spawnDistance: 0.3
   _minBooks: 3
   _maxBooks: 5

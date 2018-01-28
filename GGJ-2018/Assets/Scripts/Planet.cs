@@ -81,7 +81,7 @@ public class Planet : VRTK_InteractableObject
             _prevValues.Add(obj, rb.useGravity);
 
             rb.useGravity = false;
-            rb.AddForce(UnityEngine.Random.insideUnitSphere * 30f);
+            rb.AddForce(UnityEngine.Random.insideUnitSphere * 30f * rb.mass);
         }
         else
         {
