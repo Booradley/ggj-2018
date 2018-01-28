@@ -7,6 +7,8 @@ public class ControllerShadows : MonoBehaviour
 {
     private IEnumerator Start()
     {
+        yield return null;
+        ;
         GameObject leftHand = null;
         while (leftHand == null)
         {

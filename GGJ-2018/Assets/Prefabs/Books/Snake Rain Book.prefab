@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 65403537287699108}
   - component: {fileID: 114130091608166022}
   - component: {fileID: 114199561777943018}
+  - component: {fileID: 114786263855775318}
   m_Layer: 8
   m_Name: BookImage
   m_TagString: Untagged
@@ -324,7 +325,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1618711533180204}
   m_LocalRotation: {x: 0.49999973, y: -0.49999985, z: 0.5000001, w: 0.50000036}
-  m_LocalPosition: {x: 0.094, y: 2.39, z: -1.172}
+  m_LocalPosition: {x: 0.117, y: 2.39, z: -1.0020001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4785036508719886}
@@ -685,7 +686,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.12987879, y: 0.03291297, z: 0.13883865}
+  m_Size: {x: 0.12987879, y: 0.08, z: 0.13883865}
   m_Center: {x: -0.0047158636, y: -0.00014150143, z: -0.00339365}
 --- !u!65 &65586648665610706
 BoxCollider:
@@ -801,7 +802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableWhenIdle: 0
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.11724126, g: 1, b: 0, a: 0}
   allowedTouchControllers: 0
   ignoredColliders: []
   isGrabbable: 1
@@ -945,6 +946,21 @@ MonoBehaviour:
   - {fileID: 1881831591090288, guid: a1b88bbec911fbc46a1be31db25f26cc, type: 2}
   - {fileID: 1505880256692452, guid: a37b9f76f7ecd8b489608909e9ae2146, type: 2}
   - {fileID: 1405209824251472, guid: 73abdac91f2ef7d4a86eba2e1b5776a8, type: 2}
+--- !u!114 &114786263855775318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1693954113161914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
 --- !u!114 &114800077052706594
 MonoBehaviour:
   m_ObjectHideFlags: 1
