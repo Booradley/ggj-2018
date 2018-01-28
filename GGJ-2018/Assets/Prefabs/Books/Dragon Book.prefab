@@ -478,6 +478,7 @@ GameObject:
   - component: {fileID: 65142081497841934}
   - component: {fileID: 114770891229218730}
   - component: {fileID: 114599409353774536}
+  - component: {fileID: 114986760633111440}
   m_Layer: 8
   m_Name: BookImage
   m_TagString: Untagged
@@ -680,7 +681,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1207988498053994}
   m_LocalRotation: {x: 0.5000505, y: -0.499701, z: 0.49994928, w: 0.5002992}
-  m_LocalPosition: {x: -0.043, y: 1.629, z: -1.209}
+  m_LocalPosition: {x: -0.02, y: 1.629, z: -1.039}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4716491920789964}
@@ -1316,7 +1317,7 @@ HingeJoint:
   m_Anchor: {x: 0.5, y: -0.5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.024844956, y: 0.035175025, z: -0.00044003315}
+  m_ConnectedAnchor: {x: 0.024844956, y: 0.03517502, z: -0.00044003315}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1546,7 +1547,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.110501826, y: 0.04, z: 0.15921855}
+  m_Size: {x: 0.110501826, y: 0.08, z: 0.15921855}
   m_Center: {x: -0.00067899376, y: -0.00014150143, z: 0.0016924739}
 --- !u!65 &65278765221283398
 BoxCollider:
@@ -1759,7 +1760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableWhenIdle: 0
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.11724126, g: 1, b: 0, a: 0}
   allowedTouchControllers: 0
   ignoredColliders: []
   isGrabbable: 1
@@ -1829,6 +1830,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114986760633111440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1840952211664658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
 --- !u!114 &114999952067386926
 MonoBehaviour:
   m_ObjectHideFlags: 1
