@@ -32,6 +32,9 @@ public class WindupToy : VRTK_InteractableObject
 	private Vector3 _bounceDirectionMax;
 
 	[SerializeField]
+	private float _checkForGroundDistance;
+
+	[SerializeField]
 	private float _windHapticStrength;
 
 	[SerializeField]
@@ -92,22 +95,26 @@ public class WindupToy : VRTK_InteractableObject
 		{
 			if (_timer >= _bounceDelay)
 			{
-				_currentCharge -= _wheel.stepSize;
-				Vector3 bounceForce = new Vector3(
-					UnityEngine.Random.Range(_bounceDirectionMin.x, _bounceDirectionMax.x),
-					UnityEngine.Random.Range(_bounceDirectionMin.y, _bounceDirectionMax.y),
-					UnityEngine.Random.Range(_bounceDirectionMin.z, _bounceDirectionMax.z)
-				);
-				Vector3 bounceDirection = new Vector3();
-				bounceDirection = _bounceSource.forward * bounceForce.x;
-				bounceDirection += _bounceSource.up * bounceForce.y;
-				bounceDirection += _bounceSource.right * bounceForce.z;
-				_rigidbody.AddForceAtPosition(bounceDirection, _bounceSource.position);
-				_winderTransform.Rotate(_winderRotateAngleAmount.x, _winderRotateAngleAmount.y, _winderRotateAngleAmount.z);
-				_timer = 0;
-				if (_controllerReference != null)
+				if (Physics.Raycast(_bounceSource.position, -_bounceSource.up, _checkForGroundDistance))
 				{
-					VRTK_ControllerHaptics.TriggerHapticPulse(_controllerReference, _bounceHapticStrength, 0.1f, 0.01f);
+					Debug.DrawRay(_bounceSource.position, (-_bounceSource.up) * _checkForGroundDistance, Color.yellow);
+					_currentCharge -= _wheel.stepSize;
+					Vector3 bounceForce = new Vector3(
+						UnityEngine.Random.Range(_bounceDirectionMin.x, _bounceDirectionMax.x),
+						UnityEngine.Random.Range(_bounceDirectionMin.y, _bounceDirectionMax.y),
+						UnityEngine.Random.Range(_bounceDirectionMin.z, _bounceDirectionMax.z)
+					);
+					Vector3 bounceDirection = new Vector3();
+					bounceDirection = _bounceSource.forward * bounceForce.x;
+					bounceDirection += _bounceSource.up * bounceForce.y;
+					bounceDirection += _bounceSource.right * bounceForce.z;
+					_rigidbody.AddForceAtPosition(bounceDirection, _bounceSource.position);
+					_winderTransform.Rotate(_winderRotateAngleAmount.x, _winderRotateAngleAmount.y, _winderRotateAngleAmount.z);
+					_timer = 0;
+					if (_controllerReference != null)
+					{
+						VRTK_ControllerHaptics.TriggerHapticPulse(_controllerReference, _bounceHapticStrength, 0.1f, 0.01f);
+					}
 				}
 			}
 			else

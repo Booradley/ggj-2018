@@ -6,7 +6,7 @@ public class Snaaaaaaake : MonoBehaviour
     [SerializeField]
     private GameObject _snake;
 
-    private void Start()
+    private void OnEnable()
     {
         StartCoroutine(Spawn());
     }

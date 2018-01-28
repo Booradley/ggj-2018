@@ -1226,7 +1226,7 @@ MonoBehaviour:
   _bookImageTransform: {fileID: 4696405979688356}
   _bookImageCollider: {fileID: 65977769792745840}
   _scaleContainer: {fileID: 4919712753831262}
-  _scaleDistance: 0.1
+  _scaleDistance: 0.3
   _snapToHandSeconds: 0.1
   _snapBackSeconds: 0.1
   _proxy: {fileID: 1987245290844566}

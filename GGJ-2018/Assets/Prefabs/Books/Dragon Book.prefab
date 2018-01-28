@@ -386,7 +386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1668005595842310
 GameObject:
   m_ObjectHideFlags: 1
@@ -1650,7 +1650,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: VRTK.VRTK_Control+ValueChangedEvent, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  interactWithoutGrab: 1
+  interactWithoutGrab: 0
   connectedTo: {fileID: 1560898089289544}
   grabType: 1
   detatchDistance: 0.1
@@ -1854,5 +1854,6 @@ MonoBehaviour:
   _bounceDelay: 0.4
   _bounceDirectionMin: {x: 10, y: 100, z: -5}
   _bounceDirectionMax: {x: 12, y: 125, z: 5}
+  _checkForGroundDistance: 0.05
   _windHapticStrength: 0.1
   _bounceHapticStrength: 0.5
