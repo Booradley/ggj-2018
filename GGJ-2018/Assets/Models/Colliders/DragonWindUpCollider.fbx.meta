@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: 4de6dc8ab7363a34daa1827350ee201b
+timeCreated: 1517161300
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: DragonCollider
+    100002: DragonCollider1
+    100004: DragonCollider10
+    100006: DragonCollider11
+    100008: DragonCollider2
+    100010: DragonCollider3
+    100012: DragonCollider4
+    100014: DragonCollider5
+    100016: DragonCollider6
+    100018: DragonCollider7
+    100020: DragonCollider8
+    100022: DragonCollider9
+    100024: DragonKeyCollider
+    100026: DragonKeyCollider1
+    100028: //RootNode
+    400000: DragonCollider
+    400002: DragonCollider1
+    400004: DragonCollider10
+    400006: DragonCollider11
+    400008: DragonCollider2
+    400010: DragonCollider3
+    400012: DragonCollider4
+    400014: DragonCollider5
+    400016: DragonCollider6
+    400018: DragonCollider7
+    400020: DragonCollider8
+    400022: DragonCollider9
+    400024: DragonKeyCollider
+    400026: DragonKeyCollider1
+    400028: //RootNode
+    2300000: DragonCollider
+    2300002: DragonCollider1
+    2300004: DragonCollider10
+    2300006: DragonCollider11
+    2300008: DragonCollider2
+    2300010: DragonCollider3
+    2300012: DragonCollider4
+    2300014: DragonCollider5
+    2300016: DragonCollider6
+    2300018: DragonCollider7
+    2300020: DragonCollider8
+    2300022: DragonCollider9
+    2300024: DragonKeyCollider
+    2300026: DragonKeyCollider1
+    3300000: DragonCollider
+    3300002: DragonCollider1
+    3300004: DragonCollider10
+    3300006: DragonCollider11
+    3300008: DragonCollider2
+    3300010: DragonCollider3
+    3300012: DragonCollider4
+    3300014: DragonCollider5
+    3300016: DragonCollider6
+    3300018: DragonCollider7
+    3300020: DragonCollider8
+    3300022: DragonCollider9
+    3300024: DragonKeyCollider
+    3300026: DragonKeyCollider1
+    4300000: DragonCollider2
+    4300002: DragonCollider
+    4300004: DragonCollider3
+    4300006: DragonCollider1
+    4300008: DragonCollider4
+    4300010: DragonCollider5
+    4300012: DragonCollider11
+    4300014: DragonCollider10
+    4300016: DragonCollider9
+    4300018: DragonCollider8
+    4300020: DragonCollider7
+    4300022: DragonCollider6
+    4300024: DragonKeyCollider1
+    4300026: DragonKeyCollider
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scene_Material
+    second: {fileID: 2100000, guid: 0e6bd16f8a062c342b1f269bb6718950, type: 2}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

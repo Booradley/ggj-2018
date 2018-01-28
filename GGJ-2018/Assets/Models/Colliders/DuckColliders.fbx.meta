@@ -1,71 +1,36 @@
 fileFormatVersion: 2
-guid: c37655e817955df4caa5449694bb59a0
-timeCreated: 1517088298
+guid: 39c725d24d6b27445afd338d1794295c
+timeCreated: 1517161300
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: BackWall
-    100002: Floor
-    100004: FrontLeftWall
-    100006: FrontRightWall
-    100008: FrontWall
-    100010: RoofFullBright
-    100012: //RootNode
-    100014: SideWallLeft
-    100016: SideWallRight
-    400000: BackWall
-    400002: Floor
-    400004: FrontLeftWall
-    400006: FrontRightWall
-    400008: FrontWall
-    400010: RoofFullBright
-    400012: //RootNode
-    400014: SideWallLeft
-    400016: SideWallRight
-    2300000: BackWall
-    2300002: Floor
-    2300004: FrontLeftWall
-    2300006: FrontRightWall
-    2300008: FrontWall
-    2300010: RoofFullBright
-    2300012: SideWallLeft
-    2300014: SideWallRight
-    3300000: BackWall
-    3300002: Floor
-    3300004: FrontLeftWall
-    3300006: FrontRightWall
-    3300008: FrontWall
-    3300010: RoofFullBright
-    3300012: SideWallLeft
-    3300014: SideWallRight
-    4300000: BackWall
-    4300002: Floor
-    4300004: FrontLeftWall
-    4300006: FrontRightWall
-    4300008: FrontWall
-    4300010: RoofFullBright
-    4300012: SideWallLeft
-    4300014: SideWallRight
+    100000: DuckCollider
+    100002: DuckCollider1
+    100004: DuckCollider2
+    100006: //RootNode
+    400000: DuckCollider
+    400002: DuckCollider1
+    400004: DuckCollider2
+    400006: //RootNode
+    2300000: DuckCollider
+    2300002: DuckCollider1
+    2300004: DuckCollider2
+    3300000: DuckCollider
+    3300002: DuckCollider1
+    3300004: DuckCollider2
+    4300000: DuckCollider2
+    4300002: DuckCollider
+    4300004: DuckCollider1
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: FloorMat
-    second: {fileID: 2100000, guid: 677dd20587d81c441b5a467c16678e8f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 52c0d93bd6d790f4181e951e7bd8a96d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WallMat
-    second: {fileID: 2100000, guid: 966a7fce1362c204aa4be7f5c11345c7, type: 2}
+      name: Scene_Material
+    second: {fileID: 2100000, guid: 0e6bd16f8a062c342b1f269bb6718950, type: 2}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -132,10 +97,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
