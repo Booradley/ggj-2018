@@ -580,7 +580,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1083995762908194}
   m_LocalRotation: {x: -0, y: 0.0005951523, z: -0, w: 0.9999999}
-  m_LocalPosition: {x: -0.081, y: -0.273, z: 0.074}
+  m_LocalPosition: {x: -0.081, y: -0.273, z: 0.0543}
   m_LocalScale: {x: 0.9375704, y: 0.9375703, z: 0.9375704}
   m_Children:
   - {fileID: 4677400267005948}
@@ -796,7 +796,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1590149698302608}
   m_LocalRotation: {x: -0, y: 0.0005951523, z: -0, w: 0.9999998}
-  m_LocalPosition: {x: -0.081, y: -0.453, z: 0.091}
+  m_LocalPosition: {x: -0.081, y: -0.453, z: 0.0686}
   m_LocalScale: {x: 0.93757033, y: 0.9375703, z: 0.9375704}
   m_Children:
   - {fileID: 4667883179429316}
@@ -849,9 +849,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1767084678127938}
-  m_LocalRotation: {x: -0, y: 0.38213325, z: -0, w: 0.9241073}
-  m_LocalPosition: {x: -0.5162523, y: 0.8059373, z: -0.49458453}
-  m_LocalScale: {x: 1.0665851, y: 1.0665847, z: 1.066585}
+  m_LocalRotation: {x: -0, y: 0.7066858, z: -0, w: 0.70752764}
+  m_LocalPosition: {x: -0.72492, y: 0.8059373, z: 0.06735771}
+  m_LocalScale: {x: 1.0665853, y: 1.0665847, z: 1.0665859}
   m_Children:
   - {fileID: 4255260335455602}
   - {fileID: 4099410473877596}
@@ -867,7 +867,7 @@ Transform:
   - {fileID: 4801024351038574}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 44.932003, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 89.93201, z: 0}
 --- !u!4 &4929318824507292
 Transform:
   m_ObjectHideFlags: 1
@@ -1391,6 +1391,7 @@ MonoBehaviour:
   - {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02, type: 2}
   - {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5, type: 2}
   - {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9, type: 2}
+  - {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f, type: 2}
   _spawnDistance: 0.5
   _minBooks: 3
   _maxBooks: 8
@@ -1412,6 +1413,7 @@ MonoBehaviour:
   - {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02, type: 2}
   - {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5, type: 2}
   - {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9, type: 2}
+  - {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f, type: 2}
   _spawnDistance: 0.5
   _minBooks: 3
   _maxBooks: 8
@@ -1433,6 +1435,7 @@ MonoBehaviour:
   - {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02, type: 2}
   - {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5, type: 2}
   - {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9, type: 2}
+  - {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f, type: 2}
   _spawnDistance: 0.55
   _minBooks: 3
   _maxBooks: 8
@@ -1454,6 +1457,7 @@ MonoBehaviour:
   - {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02, type: 2}
   - {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5, type: 2}
   - {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9, type: 2}
+  - {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f, type: 2}
   _spawnDistance: 0.55
   _minBooks: 3
   _maxBooks: 8

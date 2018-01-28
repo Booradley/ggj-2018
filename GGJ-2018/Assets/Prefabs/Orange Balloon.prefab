@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114450953713569510}
   - component: {fileID: 114586521249009958}
   m_Layer: 0
-  m_Name: Balloon
+  m_Name: Orange Balloon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bc410e5b4b395874ea96845ed582b844, type: 2}
+  - {fileID: 2100000, guid: 8bd7f67d40dec1349a3cda8a0e12d2ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -686,7 +686,7 @@ Transform:
   m_GameObject: {fileID: 1136100674458082}
   m_LocalRotation: {x: -0, y: -0.38323295, z: -0, w: 0.9236518}
   m_LocalPosition: {x: 0.51295507, y: 0.8059373, z: -0.51719415}
-  m_LocalScale: {x: 1.0665848, y: 1.0665847, z: 1.0665851}
+  m_LocalScale: {x: 1.0665852, y: 1.0665847, z: 1.0665858}
   m_Children:
   - {fileID: 4742653836434882}
   - {fileID: 4222176421717072}
@@ -702,7 +702,7 @@ Transform:
   - {fileID: 4699175925311328}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -45.068, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.317, z: 0}
 --- !u!4 &4453333052964782
 Transform:
   m_ObjectHideFlags: 1
@@ -1391,6 +1391,7 @@ MonoBehaviour:
   - {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02, type: 2}
   - {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5, type: 2}
   - {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9, type: 2}
+  - {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f, type: 2}
   _spawnDistance: 0.55
   _minBooks: 3
   _maxBooks: 8
@@ -1412,6 +1413,7 @@ MonoBehaviour:
   - {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02, type: 2}
   - {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5, type: 2}
   - {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9, type: 2}
+  - {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f, type: 2}
   _spawnDistance: 0.55
   _minBooks: 3
   _maxBooks: 8
@@ -1433,6 +1435,7 @@ MonoBehaviour:
   - {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02, type: 2}
   - {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5, type: 2}
   - {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9, type: 2}
+  - {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f, type: 2}
   _spawnDistance: 0.55
   _minBooks: 3
   _maxBooks: 8
@@ -1454,6 +1457,7 @@ MonoBehaviour:
   - {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02, type: 2}
   - {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5, type: 2}
   - {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9, type: 2}
+  - {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f, type: 2}
   _spawnDistance: 0.55
   _minBooks: 3
   _maxBooks: 8

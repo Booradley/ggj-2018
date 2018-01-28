@@ -241,7 +241,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1394388570486632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.154, y: 0.081, z: -0.419}
+  m_LocalPosition: {x: -0.1015, y: 0.1289, z: -0.383}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4221559861116988}
@@ -281,7 +281,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1320118414633204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0306, y: -0.0466, z: -0.0549}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4784316785234896}
@@ -644,6 +644,7 @@ MonoBehaviour:
   - {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02, type: 2}
   - {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5, type: 2}
   - {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9, type: 2}
-  _spawnDistance: 0.53
+  - {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f, type: 2}
+  _spawnDistance: 0.3
   _minBooks: 3
-  _maxBooks: 6
+  _maxBooks: 5
