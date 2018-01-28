@@ -27,6 +27,7 @@ public class BookSpawner : MonoBehaviour
         {
             Vector3 pos = transform.position + transform.right * (i * space);
             pos.x += Random.Range(0f, space - 0.03f);
+            pos.z += Random.Range(-0.005f, 0.005f);
             Instantiate(_bookPrefabs[Random.Range(0, _bookPrefabs.Length)], pos, transform.rotation * Quaternion.Euler(new Vector3(90f, -90f, 0f)));
         }
     }
