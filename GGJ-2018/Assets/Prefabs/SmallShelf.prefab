@@ -639,12 +639,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bookGizmo: {fileID: 1320118414633204}
   _bookPrefabs:
-  - {fileID: 1285963970777304, guid: 5b77b2f4f0a6d9c44b7de40b9b9ed41f, type: 2}
-  - {fileID: 1207988498053994, guid: 7120ab80cfbf86244b72fcc482bd999b, type: 2}
-  - {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02, type: 2}
-  - {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5, type: 2}
-  - {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9, type: 2}
-  - {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f, type: 2}
+  - bookPrefab: {fileID: 1207988498053994, guid: 7120ab80cfbf86244b72fcc482bd999b,
+      type: 2}
+    weight: 100
+  - bookPrefab: {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02,
+      type: 2}
+    weight: 100
+  - bookPrefab: {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f,
+      type: 2}
+    weight: 33
+  - bookPrefab: {fileID: 1285963970777304, guid: 5b77b2f4f0a6d9c44b7de40b9b9ed41f,
+      type: 2}
+    weight: 33
+  - bookPrefab: {fileID: 1285963970777304, guid: 76d1c5d88eed61e4aacf13b7d9527adb,
+      type: 2}
+    weight: 33
+  - bookPrefab: {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5,
+      type: 2}
+    weight: 100
+  - bookPrefab: {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9,
+      type: 2}
+    weight: 100
   _spawnDistance: 0.3
   _minBooks: 3
   _maxBooks: 5

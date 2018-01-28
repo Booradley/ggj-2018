@@ -684,8 +684,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1136100674458082}
-  m_LocalRotation: {x: -0, y: -0.38323295, z: -0, w: 0.9236518}
-  m_LocalPosition: {x: 0.51295507, y: 0.8059373, z: -0.51719415}
+  m_LocalRotation: {x: -0, y: -0.70906013, z: -0, w: 0.7051481}
+  m_LocalPosition: {x: 0.71544105, y: 0.8059373, z: 0.027933078}
   m_LocalScale: {x: 1.0665852, y: 1.0665847, z: 1.0665858}
   m_Children:
   - {fileID: 4742653836434882}
@@ -1386,12 +1386,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bookGizmo: {fileID: 1859491027475358}
   _bookPrefabs:
-  - {fileID: 1285963970777304, guid: 5b77b2f4f0a6d9c44b7de40b9b9ed41f, type: 2}
-  - {fileID: 1207988498053994, guid: 7120ab80cfbf86244b72fcc482bd999b, type: 2}
-  - {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02, type: 2}
-  - {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5, type: 2}
-  - {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9, type: 2}
-  - {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f, type: 2}
+  - bookPrefab: {fileID: 1207988498053994, guid: 7120ab80cfbf86244b72fcc482bd999b,
+      type: 2}
+    weight: 100
+  - bookPrefab: {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02,
+      type: 2}
+    weight: 100
+  - bookPrefab: {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f,
+      type: 2}
+    weight: 33
+  - bookPrefab: {fileID: 1285963970777304, guid: 5b77b2f4f0a6d9c44b7de40b9b9ed41f,
+      type: 2}
+    weight: 33
+  - bookPrefab: {fileID: 1285963970777304, guid: 76d1c5d88eed61e4aacf13b7d9527adb,
+      type: 2}
+    weight: 33
+  - bookPrefab: {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5,
+      type: 2}
+    weight: 100
+  - bookPrefab: {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9,
+      type: 2}
+    weight: 100
   _spawnDistance: 0.55
   _minBooks: 3
   _maxBooks: 8
@@ -1408,12 +1423,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bookGizmo: {fileID: 1109926864973912}
   _bookPrefabs:
-  - {fileID: 1285963970777304, guid: 5b77b2f4f0a6d9c44b7de40b9b9ed41f, type: 2}
-  - {fileID: 1207988498053994, guid: 7120ab80cfbf86244b72fcc482bd999b, type: 2}
-  - {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02, type: 2}
-  - {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5, type: 2}
-  - {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9, type: 2}
-  - {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f, type: 2}
+  - bookPrefab: {fileID: 1207988498053994, guid: 7120ab80cfbf86244b72fcc482bd999b,
+      type: 2}
+    weight: 100
+  - bookPrefab: {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02,
+      type: 2}
+    weight: 100
+  - bookPrefab: {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f,
+      type: 2}
+    weight: 33
+  - bookPrefab: {fileID: 1285963970777304, guid: 5b77b2f4f0a6d9c44b7de40b9b9ed41f,
+      type: 2}
+    weight: 33
+  - bookPrefab: {fileID: 1285963970777304, guid: 76d1c5d88eed61e4aacf13b7d9527adb,
+      type: 2}
+    weight: 33
+  - bookPrefab: {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5,
+      type: 2}
+    weight: 100
+  - bookPrefab: {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9,
+      type: 2}
+    weight: 100
   _spawnDistance: 0.55
   _minBooks: 3
   _maxBooks: 8
@@ -1430,12 +1460,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bookGizmo: {fileID: 1706270405017642}
   _bookPrefabs:
-  - {fileID: 1285963970777304, guid: 5b77b2f4f0a6d9c44b7de40b9b9ed41f, type: 2}
-  - {fileID: 1207988498053994, guid: 7120ab80cfbf86244b72fcc482bd999b, type: 2}
-  - {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02, type: 2}
-  - {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5, type: 2}
-  - {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9, type: 2}
-  - {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f, type: 2}
+  - bookPrefab: {fileID: 1207988498053994, guid: 7120ab80cfbf86244b72fcc482bd999b,
+      type: 2}
+    weight: 100
+  - bookPrefab: {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02,
+      type: 2}
+    weight: 100
+  - bookPrefab: {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f,
+      type: 2}
+    weight: 33
+  - bookPrefab: {fileID: 1285963970777304, guid: 5b77b2f4f0a6d9c44b7de40b9b9ed41f,
+      type: 2}
+    weight: 33
+  - bookPrefab: {fileID: 1285963970777304, guid: 76d1c5d88eed61e4aacf13b7d9527adb,
+      type: 2}
+    weight: 33
+  - bookPrefab: {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5,
+      type: 2}
+    weight: 100
+  - bookPrefab: {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9,
+      type: 2}
+    weight: 100
   _spawnDistance: 0.55
   _minBooks: 3
   _maxBooks: 8
@@ -1452,12 +1497,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bookGizmo: {fileID: 1661979194668996}
   _bookPrefabs:
-  - {fileID: 1285963970777304, guid: 5b77b2f4f0a6d9c44b7de40b9b9ed41f, type: 2}
-  - {fileID: 1207988498053994, guid: 7120ab80cfbf86244b72fcc482bd999b, type: 2}
-  - {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02, type: 2}
-  - {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5, type: 2}
-  - {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9, type: 2}
-  - {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f, type: 2}
+  - bookPrefab: {fileID: 1207988498053994, guid: 7120ab80cfbf86244b72fcc482bd999b,
+      type: 2}
+    weight: 100
+  - bookPrefab: {fileID: 1806936872906080, guid: 7720bb4bafd9a5b4381b09e774322d02,
+      type: 2}
+    weight: 100
+  - bookPrefab: {fileID: 1285963970777304, guid: ac7721b945100f847857e2d1bb706c0f,
+      type: 2}
+    weight: 33
+  - bookPrefab: {fileID: 1285963970777304, guid: 5b77b2f4f0a6d9c44b7de40b9b9ed41f,
+      type: 2}
+    weight: 33
+  - bookPrefab: {fileID: 1285963970777304, guid: 76d1c5d88eed61e4aacf13b7d9527adb,
+      type: 2}
+    weight: 33
+  - bookPrefab: {fileID: 1249525515341356, guid: da43cb79fdda4a141b1e497314feaab5,
+      type: 2}
+    weight: 100
+  - bookPrefab: {fileID: 1405884805271938, guid: b55876f0cf813cb458457984938f6de9,
+      type: 2}
+    weight: 100
   _spawnDistance: 0.55
   _minBooks: 3
   _maxBooks: 8
