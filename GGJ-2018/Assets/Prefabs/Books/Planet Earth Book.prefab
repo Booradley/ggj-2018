@@ -857,7 +857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gizmoMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
   _defaultRenderers: []
-  _getAllRenderersInChildren: {fileID: 0}
+  _getAllRenderersInChildren: {fileID: 1852153117673950}
 --- !u!114 &114606416382908052
 MonoBehaviour:
   m_ObjectHideFlags: 1

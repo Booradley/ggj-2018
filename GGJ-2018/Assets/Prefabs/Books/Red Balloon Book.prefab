@@ -413,7 +413,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1285963970777304}
   m_LocalRotation: {x: 0.51546097, y: -0.48398966, z: 0.51542705, w: 0.48413742}
-  m_LocalPosition: {x: 0.118, y: 2.013, z: -1.039}
+  m_LocalPosition: {x: 0.1278, y: 1.7172999, z: -1.0386}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1}
   m_Children:
   - {fileID: 4884017826095838}
@@ -724,7 +724,7 @@ HingeJoint:
   m_Anchor: {x: 0.5, y: -0.5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.02484498, y: 0.035175018, z: -0.00043989345}
+  m_ConnectedAnchor: {x: 0.02484498, y: 0.03517501, z: -0.00044001266}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -840,7 +840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gizmoMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
   _defaultRenderers: []
-  _getAllRenderersInChildren: {fileID: 0}
+  _getAllRenderersInChildren: {fileID: 1363393105200500}
 --- !u!114 &114209099850235150
 MonoBehaviour:
   m_ObjectHideFlags: 1

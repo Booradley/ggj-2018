@@ -485,7 +485,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1405884805271938}
   m_LocalRotation: {x: 0.50001013, y: -0.49998853, z: 0.49999005, w: 0.5000114}
-  m_LocalPosition: {x: 0.023000002, y: 1.999, z: -1.019}
+  m_LocalPosition: {x: 0.032800004, y: 1.7032999, z: -1.0186}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4821189841122994}
@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gizmoMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
   _defaultRenderers: []
-  _getAllRenderersInChildren: {fileID: 0}
+  _getAllRenderersInChildren: {fileID: 1987245290844566}
 --- !u!114 &114948313777657060
 MonoBehaviour:
   m_ObjectHideFlags: 1
